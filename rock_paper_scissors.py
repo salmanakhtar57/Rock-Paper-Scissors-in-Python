@@ -5,6 +5,9 @@ def get_computer_choice():
     return random.choice(choices)
 
 def play_round(player_selection, computer_selection):
+    player_selection = player_selection.lower()
+    computer_selection = computer_selection.lower()
+    
     if (player_selection == computer_selection):
         print(f"Both selected {player_selection}. It's a draw.")
         return 0
@@ -17,7 +20,7 @@ def play_round(player_selection, computer_selection):
         print(f"{computer_selection} beats {player_selection} \nYou lose!")
         return -1
 
-def game():
+def game(): 
     player_score = 0
     computer_score = 0
 
